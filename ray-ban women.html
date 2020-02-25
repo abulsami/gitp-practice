@@ -1,0 +1,908 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RAY-BAN</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+<!--bootstrap navbar-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!--bootstrap navbar-->
+</head>
+<style>
+.hov{
+	margin:50px auto;
+	width:100%;
+	height:510px;
+	background:#000;
+	overflow:hidden;
+	font-family: sans-serif;
+	color:#fff;
+	perspective:50em;
+	box-sizing:border-box;
+	transition:.5s ease;
+	position:relative;
+	border:1px solid rgba(255,255,255.2);
+}
+.hov img{
+	width:100%;
+	transition:.5s;
+	transform-origin:0 100%;
+}
+.txt{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	z-index:1;
+	opacity:0;
+	background:#99001a;
+	padding:30%;
+	padding-top:22%;
+	transform:rotateX(-90deg);
+	transform-origin:50% 0%;
+	transition:.5s;
+}
+.txt h1{
+	line-height:1.3em;
+}
+.hov:hover img{
+	transform:rotateX(90deg);
+	opacity:0;
+}
+.hov:hover .txt{
+	opacity:1;
+	transform:rotateX(0deg);
+	transition-delay:.3s;
+}
+	
+	
+.card{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	
+	overflow:hidden;
+	margin-right:440px;
+	margin-top:230px;
+}
+
+
+
+.card1{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+	margin-left:340px;
+	margin-top:-350px;
+}
+.card1 .imgbx,
+.card1 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card1 .imgbx{
+	top:0;
+	left:0;
+}
+.card1:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card1 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card1 .deta{
+	background:#CCC;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card1:hover .deta{
+	top:0;
+	left:0;
+}
+.card1 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:30px;
+}
+.card1 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:35px;
+}
+
+.card2{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+	margin-left:950px;
+	margin-top:-350px;
+}
+.card2 .imgbx,
+.card2 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card2 .imgbx{
+	top:0;
+	left:0;
+}
+.card2:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card2 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card2 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card2:hover .deta{
+	top:0;
+	left:0;
+}
+.card2 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:30px;
+}
+.card2 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:30px;
+}
+
+
+.card3{	
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+	margin-right:410px;
+	margin-top:200px;
+	box-shadow:5px 5px 5px #333333;
+}
+.card3 .imgbx,
+.card3 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card3 .imgbx{
+	top:0;
+	left:0;
+}
+.card3:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card3 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card3 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card3:hover .deta{
+	top:0;
+	left:0;
+}
+.card3 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:28px;
+}
+.card3 .deta p{
+	margin:20px 0 0;
+
+	color:#000;
+	font-family: sans-serif;
+	font-size:25px;
+}
+
+.card4{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+	margin-left:350px;
+	margin-top:-350px;
+	box-shadow:5px 5px 5px #333333;
+}
+.card4 .imgbx,
+.card4 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card4 .imgbx{
+	top:0;
+	left:0;
+}
+.card4:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card4 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card4 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card4:hover .deta{
+	top:0;
+	left:0;
+}
+.card4 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:30px;
+}
+.card4 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:28px;
+}
+
+.card5{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+	margin-left:935px;
+	margin-top:-350px;
+	box-shadow:5px 5px 5px #333333;
+}
+.card5 .imgbx,
+.card5 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card5 .imgbx{
+	top:0;
+	left:0;
+}
+.card5:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card5 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card5 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card5:hover .deta{
+	top:0;
+	left:0;
+}
+.card5 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:30px;
+}
+.card5 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:30px;
+}
+
+.card6{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+	margin-right:410px;
+	margin-top:100px;
+	box-shadow:5px 5px 5px #333333;
+}
+.card6 .imgbx,
+.card6 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card6 .imgbx{
+	top:0;
+	left:0;
+}
+.card6:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card6 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card6 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card6:hover .deta{
+	top:0;
+	left:0;
+}
+.card6 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:28px;
+}
+.card6 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:28px;
+}
+
+.card7{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+	margin-left:350px;
+	margin-top:-350px;
+	box-shadow:5px 5px 5px #333333;
+}
+.card7 .imgbx,
+.card7 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card7 .imgbx{
+	top:0;
+	left:0;
+}
+.card7:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card7 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card7 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card7:hover .deta{
+	top:0;
+	left:0;
+}
+.card7 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:30px;
+}
+.card7 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:28px;
+}
+
+.card8{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+		margin-left:935px;
+	margin-top:-350px;
+	box-shadow:5px 5px 5px #333333;
+}
+.card8 .imgbx,
+.card8 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card8 .imgbx{
+	top:0;
+	left:0;
+}
+.card8:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card8 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card8 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card8:hover .deta{
+	top:0;
+	left:0;
+}
+.card8 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:28px;
+}
+.card8 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:25px;
+}	
+#div2{
+	height:400px;
+	width:1100px;
+	background-color:#00F;
+	}
+	
+.card9{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+	margin-right:410px;
+	margin-top:100px;
+	box-shadow:5px 5px 5px #333333;
+	
+}
+.card9 .imgbx,
+.card9 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card9 .imgbx{
+	top:0;
+	left:0;
+}
+.card9:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card9 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card9 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card9:hover .deta{
+	top:0;
+	left:0;
+}
+.card9 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:28px;
+}
+.card9 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:28px;
+}
+
+.card10{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+	margin-left:345px;
+	margin-top:-350px;
+	box-shadow:5px 5px 5px #333333;
+}
+.card10 .imgbx,
+.card10 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card10 .imgbx{
+	top:0;
+	left:0;
+}
+.card10:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card10 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card10 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card10:hover .deta{
+	top:0;
+	left:0;
+}
+.card10 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:30px;
+}
+.card10 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:28px;
+}
+
+.card11{
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:350px;
+	background:#99001a;
+	overflow:hidden;
+		margin-left:935px;
+	margin-top:-350px;
+	box-shadow:5px 5px 5px #333333;
+}
+.card11 .imgbx,
+.card11 .deta{
+	width:100%;
+	height:100%;
+	position:absolute;
+	box-sizing:border-box;
+	transition:.5s;
+}
+.card11 .imgbx{
+	top:0;
+	left:0;
+}
+.card11:hover .imgbx{
+	top:0;
+	left:-100%;
+}
+.card11 .imgbx img{
+	width:100%;
+	height:350px;
+}
+.card11 .deta{
+	background:#FFF;
+	top:0;
+	left:100%;
+	padding:15px 20px;
+}
+.card11:hover .deta{
+	top:0;
+	left:0;
+}
+.card11 .deta h1{
+	color:#000;
+	text-align:center;
+	margin:0;
+	padding:0 0 5px;
+	border-bottom:2px solid #fff;
+	font-family: sans-serif;
+	font-size:28px;
+}
+.card11 .deta p{
+	margin:20px 0 0;
+	color:#000;
+	font-family: sans-serif;
+	font-size:25px;
+}	
+
+
+
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+ 
+}
+
+.next {
+  background-color: #f1f1f1;
+  color:black;
+}
+
+.round {
+  border-radius: 50%;
+}		
+</style>
+<body>
+<center>
+<div class="container">
+<div class="header">
+<img src="images/index pic/output-onlinepngtools.png" height="125px" width="190px" style="margin-right:940px;"/>
+<div class="topnavbardowntoset">
+<div class="navbarfont">
+<div class="topnav">
+                    <a class="active" href="index.html">HOME</a>
+                     <a href="about.html">ABOUT</a>
+                   <a href="ray-ban.html">RAY-BAN</a>
+                  <a href="brand prada-1.html">PRADA</a>
+                 <a href="mont-blanc-1.html">MONT-BLANC</a>
+                <a href="lenses.html">LENSES</a>
+              <a href="contact us.html">CONTACT US</a>
+              </div> 
+             </div> 
+
+</div>
+<br>
+
+<div class="sec">
+
+<div id="div2">
+<img src="images/ray-ban-women/B4_Main_banner (1).jpg" height="400px" width="1100px"/>
+</div>
+<h1>WOMEN GLASSES</h1>
+<div class="card3">
+   <div class="imgbx">
+      <img src="images/ray-ban-women/JACKIE OHH.jpg"/>
+   </div>
+   <div class="deta">
+      <h1>JACKIE OHH</h1>
+      <p>what she wants!!.</p>
+      <h2 style="color:#000;">SUNGLASS</h2>
+   </div>       
+</div>    
+
+    
+<div class="card4">
+   <div class="imgbx">
+      <img src="images/ray-ban-women/NINA.jpg"/>
+   </div>
+   <div class="deta">
+      <h1>NINA</h1>
+      <p>what she wants!!.</p>
+      <h2 style="color:#000;">SUNGLASS</h2>
+   </div>       
+</div>    
+    
+    
+<div class="card5">
+   <div class="imgbx">
+      <img src="images/ray-ban-women/Ray-Ban Highstreet Polarized.jpg"/>
+   </div>
+   <div class="deta">
+      <h1>HIGHSTREET POLARIZED </h1>
+      <p>what she wants!!.</p>
+      <h2 style="color:#000;">SUNGLASS</h2>
+   </div>       
+</div>    
+
+
+<div class="card6">
+   <div class="imgbx">
+      <img src="images/ray-ban-women/Ray-Ban RB2447 Round Fleck 1157.jpg"/>
+   </div>
+   <div class="deta">
+      <h1>ROUND FLECK</h1>
+      <p>what she wants!!.</p>
+      <h2 style="color:#000;">SUNGLASS</h2>
+   </div>       
+</div>     
+        
+    
+<div class="card7">
+   <div class="imgbx">
+      <img src="images/ray-ban-women/Ray-Ban RX5360 2034.jpg"/>
+   </div>
+   <div class="deta">
+      <h1>RAY-BAN RX5360</h1>
+      <p>what she wants!!.</p>
+      <h2 style="color:#000;">EYE GLASS</h2>
+   </div>       
+</div>     
+    
+<div class="card8">
+   <div class="imgbx">
+      <img src="images/ray-ban-women/RB6317.jpg"/>
+   </div>
+   <div class="deta">
+      <h1>RAY-BAN RB6317</h1>
+      <p>what she wants!!.</p>
+      <h2 style="color:#000;">EYE GLASS</h2>
+   </div>       
+
+</div>
+
+
+
+<div class="card9">
+   <div class="imgbx">
+      <img src="images/ray-ban-women/RB7047.jpg"/>
+   </div>
+   <div class="deta">
+      <h1>RAY-BAN RB7047</h1>
+      <p>what she wants!!.</p>
+      <h2 style="color:#000;">EYE GLASS</h2>
+   </div>       
+</div>     
+        
+    
+<div class="card10">
+   <div class="imgbx">
+     <img src="images/ray-ban-women/ROUND FLECK.jpg"/>
+   </div>
+   <div class="deta">
+      <h1>ROUND FLECK</h1>
+      <p>what she wants!!.</p>
+      <h2 style="color:#000;">SUNGLASS</h2>
+   </div>       
+</div>     
+    
+<div class="card11">
+   <div class="imgbx">
+      <img src="images/ray-ban-women/Ray-Ban RB2447 Round Fleck 1157.jpg"/>
+   </div>
+   <div class="deta">
+      <h1>RAY-BAN RB2447</h1>
+      <p>what she wants!!.</p>
+      <h2 style="color:#000;">SUNGLASS</h2>
+   </div>       
+</div>
+<br>
+<br>
+<br>
+
+<h1>DOWNLOAD DETAIL FROM HERE</h1>
+<center>
+
+<a href="images/ray-ban-women/SUNGLASSES WOMEN.docx"> CLICK HERE </a>
+</center>
+<h1><b>MEN BRAND ARE AVALIABLE HERE</b></h1>
+<center>
+
+<a href="ray-ban.html" class="next">MAN &raquo;</a>
+</center>
+<br>
+<br>
+
+
+  
+</div>
+<div class="foot">
+<br>
+
+ © 2019 All Rights Reserved
+ <br>
+<br>
+
+<h3 style="float:left;"><b>LOCATION&nbsp;&nbsp;|&nbsp;CONTACT US</b></h3>
+<br>
+
+<br>
+
+<p style="float:left; margin-left:40px;">mashrique center 1st floor glushan,<br>
+Karachi,<br>
+Pakistan.</p>
+
+
+<p style="float:left;margin-left:70px;">PHONE NO:021-2345232,<br>
+
+MAIL US:eyeonic@gmail.com</p>
+<a href="https://plus.google.com/create"><img src="images/index pic/ikon1_google-plus-ikon.png" height="30px" width="30px" style="float:right; margin-right:-250px;" /> </a>  
+<a href="https://www.facebook.com/"><img src="images/index pic/FB-f-Logo__blue_100.png" height="30px" width="30px" style="float:right; margin-right:-250px;" />  </a>
+<a href="https://twitter.com/i/flow/signup"><img src="images/index pic/social_twitter.png" height="30px" width="30px" style="float:right; margin-right:-250px;" /> </a>  
+</div>
+
+
+</div></center>
+</body>
+</html>
